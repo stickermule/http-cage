@@ -6,7 +6,7 @@ Global timeouts for Ruby's `Net::HTTP`.
 
 `Net::HTTP` by default has a connect timeout of 60 seconds and a request timeout of 60 seconds, a 2 minutes worst-case scenario timeout.
 
-These defaults are kinda dangerous in a micro-services environment, where responses should happen fast or just timeout, to avoid server processes locking.
+These defaults are kinda dangerous in a micro-services environment, where requests should happen fast or just timeout, to avoid server processes locking.
 
 This gems lets you globally restrict timeouts of `Net::HTTP` calls, so that all gems and libraries that use `Net::HTTP` will timeout fast.
 
