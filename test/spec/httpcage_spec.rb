@@ -13,6 +13,13 @@ describe 'HTTPCage' do
     client.read_timeout.must_equal 2
   end
 
+  it 'can be overridden by another cage' do
+    HTTPCage.timeout(connection: 10, request: 20)
+    client = Net::HTTP.new('google.com')
+    client.open_timeout.must_equal 10
+    client.read_timeout.must_equal 20
+  end
+
   it 'will not timeout on a routable address' do
     client = Net::HTTP.new('www.google.com')
     get = Net::HTTP::Get.new('/')
