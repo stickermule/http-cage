@@ -33,6 +33,12 @@ HTTPCage.timeout(connection: 10, request: 30)
 bundle exec rake test:all
 ```
 
+## Demo
+
+[example.rb](demo/example.rb)
+
+[![asciicast](https://asciinema.org/a/112964.png)](https://asciinema.org/a/112964)
+
 ## Contribute
 
 - We use GitHub issues to discuss everything: features, bugs, docs.
