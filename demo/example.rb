@@ -5,18 +5,20 @@ require 'colorize'
 # Client making a 10 seconds HTTP call.
 class SlowCall
   def get
+    request = "http request: "
     begin
-      p "Starting http call"
+      sleep 0.5
+      puts request + "started".yellow
       http = Net::HTTP.new('httpbin.org')
       get = Net::HTTP::Get.new('/delay/10')
       http.request(get).body
-      p "http completed"
+      puts request + "completed".green
     rescue Net::ReadTimeout
-      p "http timed out"
+      puts request + "timed out".red
     rescue Net::OpenTimeout
-      p "http timed out"
+      puts request + "timed out".red
     rescue Interrupt
-      p "http killed"
+      puts request + "shutdown".green
     end
   end
 end
@@ -24,12 +26,13 @@ end
 # Server running with a timeout of 5 seconds.
 class Server
   def run
+    server = "server: "
     trap("INT") do
-      p "manual shut down"
+      puts server + "shutdown".green
       exit
     end
 
-    p "booting server"
+    puts server + "booting".green
     loop do
       worker = fork do
         SlowCall.new().get
@@ -37,13 +40,14 @@ class Server
 
       begin
         Timeout.timeout(10) do
-          p "server process waiting"
+          puts server + "ready".yellow
           Process.wait worker
           next
         end
       rescue Timeout::Error
-        p "server going down"
-        Process.kill('INT', worker)
+        puts server + "down".red
+        Process.kill("INT", worker)
+        Process.wait(worker)
         break
       end
     end
