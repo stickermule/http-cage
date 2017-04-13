@@ -35,9 +35,9 @@ bundle exec rake test:all
 
 ## Demo
 
-Forking server, slow request: [example.rb](demo/example.rb)
-Without http-cage: [without_cage.rb](demo/without_cage.rb)
-With http-cage: [with_cage.rb](demo/with_cage.rb)
+- Forking server, slow request: [example.rb](demo/example.rb)
+- Without http-cage: [without_cage.rb](demo/without_cage.rb)
+- With http-cage: [with_cage.rb](demo/with_cage.rb)
 
 [![asciicast](https://asciinema.org/a/113238.png)](https://asciinema.org/a/113238)
 
