@@ -1,5 +1,6 @@
 require 'net/http'
 require 'http-cage'
+require 'colorize'
 
 # Client making a 10 seconds HTTP call.
 class SlowCall
@@ -23,6 +24,11 @@ end
 # Server running with a timeout of 5 seconds.
 class Server
   def run
+    trap("INT") do
+      p "manual shut down"
+      exit
+    end
+
     p "booting server"
     loop do
       worker = fork do
