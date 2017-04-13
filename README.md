@@ -35,9 +35,11 @@ bundle exec rake test:all
 
 ## Demo
 
-[example.rb](demo/example.rb)
+Forking server, slow request: [example.rb](demo/example.rb)
+Without http-cage: [without_cage.rb](demo/without_cage.rb)
+With http-cage: [with_cage.rb](demo/with_cage.rb)
 
-[![asciicast](https://asciinema.org/a/112964.png)](https://asciinema.org/a/112964)
+[![asciicast](https://asciinema.org/a/113238.png)](https://asciinema.org/a/113238)
 
 ## Contribute
 
