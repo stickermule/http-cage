@@ -1,4 +1,4 @@
-box: ruby:2.3-alpine
+box: ruby
 build:
   steps:
     - script:
