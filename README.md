@@ -4,6 +4,7 @@
 
 # HTTP-Cage.
 [![Gem Version](https://badge.fury.io/rb/http-cage.svg)](https://badge.fury.io/rb/http-cage)
+[![wercker status](https://app.wercker.com/status/d20dc24d669be52ee950f49a06cbd1e0/s/master "wercker status")](https://app.wercker.com/project/byKey/d20dc24d669be52ee950f49a06cbd1e0)
 
 Global timeouts for Ruby's `Net::HTTP`.
 
