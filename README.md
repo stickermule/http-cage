@@ -52,7 +52,12 @@ bundle exec rake test:all
 
 ## Maintainers
 
-[badshark](https://github.com/badshark)
+- [badshark](https://github.com/badshark)
+
+## Artwork
+
+- Designer: Francesca Segantini
+- Director: [Justin Dorfman](https://github.com/jdorfman)
 
 ## License
 
