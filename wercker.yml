@@ -1,0 +1,6 @@
+box: ruby:2.3-alpine
+build:
+  steps:
+    - script:
+        name: test
+        code: bundle exec rake test:all
