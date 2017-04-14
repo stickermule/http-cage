@@ -3,6 +3,7 @@
 </h1>
 
 # HTTP-Cage.
+[![Gem Version](https://badge.fury.io/rb/http-cage.svg)](https://badge.fury.io/rb/http-cage)
 
 Global timeouts for Ruby's `Net::HTTP`.
 
