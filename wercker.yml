@@ -1,0 +1,6 @@
+box: ruby
+build:
+  steps:
+    - script:
+        name: test
+        code: bundle exec rake test:all

@@ -1,10 +1,16 @@
+<h1 align="center">
+<img src="https://cdn.rawgit.com/stickermule/http-cage/example/assets/images/http-case_logo.svg" width="500">
+</h1>
+
 # HTTP-Cage.
+[![Gem Version](https://badge.fury.io/rb/http-cage.svg)](https://badge.fury.io/rb/http-cage)
+[![wercker status](https://app.wercker.com/status/d20dc24d669be52ee950f49a06cbd1e0/s/master "wercker status")](https://app.wercker.com/project/byKey/d20dc24d669be52ee950f49a06cbd1e0)
 
 Global timeouts for Ruby's `Net::HTTP`.
 
 ## Why.
 
-`Net::HTTP` by default has a connect timeout of 60 seconds and a request timeout of 60 seconds, a 2 minutes worst-case scenario timeout.
+`Net::HTTP` by default has a connect timeout of 60 seconds and a request timeout of 60 seconds, a 2 minutes worst-case scenario timeout, with auto-retry.
 
 These defaults are kinda dangerous in a micro-services environment, where requests should happen fast or just timeout, to avoid server processes locking.
 
@@ -33,6 +39,14 @@ HTTPCage.timeout(connection: 10, request: 30)
 bundle exec rake test:all
 ```
 
+## Demo
+
+- Forking server, slow request: [example.rb](demo/example.rb)
+- Without http-cage: [without_cage.rb](demo/without_cage.rb)
+- With http-cage: [with_cage.rb](demo/with_cage.rb)
+
+[![asciicast](https://asciinema.org/a/113238.png)](https://asciinema.org/a/113238)
+
 ## Contribute
 
 - We use GitHub issues to discuss everything: features, bugs, docs.
@@ -40,7 +54,12 @@ bundle exec rake test:all
 
 ## Maintainers
 
-[badshark](https://github.com/badshark)
+- [badshark](https://github.com/badshark)
+
+## Artwork
+
+- Designer: Francesca Segantini
+- Director: [Justin Dorfman](https://github.com/jdorfman)
 
 ## License
 
