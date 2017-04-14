@@ -21,9 +21,9 @@ describe 'HTTPCage' do
   end
 
   it 'will not timeout on a routable address' do
-    client = Net::HTTP.new('www.google.com')
+    client = Net::HTTP.new('httpbin.org')
     get = Net::HTTP::Get.new('/')
-    client.request(get).body.strip.must_include "Moved"
+    client.request(get).code.must_equal "200"
   end
 
   it 'will timeout during connection on a non-routable address' do
