@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="assets/images/http-case_logo.svg">
+<img src="https://cdn.rawgit.com/stickermule/http-cage/example/assets/images/http-case_logo.svg">
 </h1>
 
 # HTTP-Cage.
