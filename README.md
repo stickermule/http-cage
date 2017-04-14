@@ -1,3 +1,7 @@
+<h1 align="center">
+<img src="assets/images/http-case_logo.svg">
+</h1>
+
 # HTTP-Cage.
 
 Global timeouts for Ruby's `Net::HTTP`.
