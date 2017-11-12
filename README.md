@@ -54,7 +54,7 @@ bundle exec rake test:all
 
 ## Maintainers
 
-- [badshark](https://github.com/badshark)
+- [nixtrace](https://github.com/nixtrace)
 
 ## Artwork
 
