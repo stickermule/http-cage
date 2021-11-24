@@ -4,20 +4,22 @@ require 'uri'
 
 describe 'HTTPCage' do
   before do
-    HTTPCage.timeout(connection: 1, request: 2)
+    HTTPCage.timeout(connection: 1, request: 2, ssl: 3)
   end
 
   it 'overrides Net::HTTP timeouts' do
     client = Net::HTTP.new('google.com')
     client.open_timeout.must_equal 1
     client.read_timeout.must_equal 2
+    client.ssl_timeout.must_equal 3
   end
 
   it 'can be overridden by another cage' do
-    HTTPCage.timeout(connection: 10, request: 20)
+    HTTPCage.timeout(connection: 10, request: 20, ssl: 30)
     client = Net::HTTP.new('google.com')
     client.open_timeout.must_equal 10
     client.read_timeout.must_equal 20
+    client.ssl_timeout.must_equal 30
   end
 
   it 'will not timeout on a routable address' do
